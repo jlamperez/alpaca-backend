@@ -1,0 +1,7 @@
+# Entorno virtual creado por uv venv
+.venv/
+# Archivos típicos de Python
+__pycache__/
+*.py[cod]
+# Config dotenv
+.env

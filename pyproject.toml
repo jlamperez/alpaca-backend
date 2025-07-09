@@ -1,0 +1,31 @@
+[project]
+name = "trading-backend"
+version = "0.1.0"
+description = "Backend FastAPI que se conecta a Alpaca mediante alpaca‑py"
+authors = [{ name = "Jorge Lamperez", email = "jlamperez10@gmail.com" }]
+requires-python = ">=3.12"
+
+# Dependencias de producción
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "python-dotenv",
+    "alpaca-py",
+    "pydantic",
+]
+
+# Dependencias opcionales (útiles para desarrollo)
+[project.optional-dependencies]
+dev = [
+    "black",
+    "pytest",
+    "ruff",
+]
+
+# Atajo para poner el servidor en modo desarrollo
+[project.scripts]
+run-dev = "app.cli:run_dev"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
